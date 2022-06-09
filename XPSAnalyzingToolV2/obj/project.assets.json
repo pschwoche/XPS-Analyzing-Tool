@@ -94,11 +94,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programmieren\\Projekte\\C#\\XPSAnalyzingToolV2\\XPSAnalyzingToolV2\\XPSAnalyzingToolV2.csproj",
-      "projectName": "XPSAnalyzingToolV2",
-      "projectPath": "D:\\Programmieren\\Projekte\\C#\\XPSAnalyzingToolV2\\XPSAnalyzingToolV2\\XPSAnalyzingToolV2.csproj",
+      "projectUniqueName": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
+      "projectName": "XPSAnalyzingTool",
+      "projectPath": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
       "packagesPath": "C:\\Users\\pschw\\.nuget\\packages\\",
-      "outputPath": "D:\\Programmieren\\Projekte\\C#\\XPSAnalyzingToolV2\\XPSAnalyzingToolV2\\obj\\",
+      "outputPath": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pschw\\AppData\\Roaming\\NuGet\\NuGet.Config",

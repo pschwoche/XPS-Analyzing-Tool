@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7q6pbFnODhYehYyIx8Itp0KinxAwwsFqwDW/NypZWj6tRG2A/s06XLK5HnREjpf65e7QmZLZ7bgmeNApNbXjiQ==",
+  "dgSpecHash": "x2cB6vxvsWOMqZl4nAZqCEbu77Z0IyGadH71wge9Pxsll6wXmP00Jb49b08hrXx/st+buDrBLZf6RCdxhdsA5w==",
   "success": true,
-  "projectFilePath": "D:\\Programmieren\\Projekte\\C#\\XPSAnalyzingToolV2\\XPSAnalyzingToolV2\\XPSAnalyzingToolV2.csproj",
+  "projectFilePath": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pschw\\.nuget\\packages\\zedgraph\\5.1.7\\zedgraph.5.1.7.nupkg.sha512"
   ],
