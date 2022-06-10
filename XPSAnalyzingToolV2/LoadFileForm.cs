@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using ZedGraph;
+using XPSAnalyzingTool;
 
 namespace XPSAnalyzingToolV2
 {
@@ -54,8 +55,6 @@ namespace XPSAnalyzingToolV2
 
             UpdateExplorer();
         }
-
-
 
         private void UpdateExplorer()
         {
@@ -131,7 +130,6 @@ namespace XPSAnalyzingToolV2
             }
         }
 
-
         private void listViewExplorer_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             ListViewItem item = this.listViewExplorer.GetItemAt(e.X, e.Y);
@@ -186,8 +184,6 @@ namespace XPSAnalyzingToolV2
             }
         }
 
-        
-
         private int GetRadioButtonIndex()
         {
             if (radioButtonSigmaColumn.Checked)
@@ -206,9 +202,6 @@ namespace XPSAnalyzingToolV2
                 return 2;
             }
         }
-
-
-
 
         private void PreviewFile(string path)
         {
@@ -234,12 +227,10 @@ namespace XPSAnalyzingToolV2
             }
         }
 
-
         private void comboBoxFileFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateExplorer();
         }
-
 
         private void PreviewGraph(PointPairList ppl)
         {
@@ -256,6 +247,7 @@ namespace XPSAnalyzingToolV2
             zedGraphControl1.Refresh();
 
         }
+
         private PointPairList ReducePPL(PointPairList ppl)
         {
             PointPairList erg = new PointPairList();
@@ -326,6 +318,69 @@ namespace XPSAnalyzingToolV2
 
         }
 
+        private Data ParseFileToData(string path, string delimiter, int indX, int indY, int indSigma, int sigmamode)
+        {
+            try
+            {
+                List<double> xlist = new List<double>();
+                List<double> ylist = new List<double>();
+                List<double> errorlist = new List<double>();
+
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    string zeile;
+
+                    while ((zeile = sr.ReadLine()) != null)
+                    {
+                        double x, y, sigma;
+                        string[] strValues = zeile.Split(delimiter);
+
+                        if (indX >= strValues.Length || indY >= strValues.Length || indSigma >= strValues.Length)
+                        {
+                            throw new Exception("Index out of range!");
+                        }
+                        Double.TryParse(strValues[indX].Replace('.', ','), out x);
+                        Double.TryParse(strValues[indY].Replace('.', ','), out y);
+
+                        switch (sigmamode)
+                        {
+                            case 1:
+                                Double.TryParse(strValues[indSigma].Replace('.', ','), out sigma);
+                                break;
+
+                            case 2:
+                                sigma = Math.Max(Math.Sqrt(Math.Abs(y)), 1);
+                                break;
+
+                            case 3:
+                                sigma = 1;
+                                break;
+
+                            default:
+                                throw new Exception("sigmamode is strange...");
+                        }
+                        xlist.Add(x);
+                        ylist.Add(y);
+                        errorlist.Add(sigma);
+                    }
+                    sr.Close();
+
+                }
+
+                double[] xarray = xlist.ToArray();
+                double[] yarray = ylist.ToArray();
+                double[] errorarray = errorlist.ToArray();
+
+                return new Data(xarray, yarray, errorarray);
+
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"{ex.Message}");
+                return null;
+            }
+        }
+
         private void radioButtonSigmaColumn_MouseClick(object sender, MouseEventArgs e)
         {
             
@@ -380,6 +435,24 @@ namespace XPSAnalyzingToolV2
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            int indx = Decimal.ToInt32(this.numericUpDownX.Value);
+            int indy = Decimal.ToInt32(this.numericUpDownY.Value);
+            int indsigma = Decimal.ToInt32(this.numericUpDownSigma.Value);
+
+            int sigmaMode = GetRadioButtonIndex();
+            string path = $"{currentPath}\\{textBoxLastFile.Text}";
+
+            Data data = this.ParseFileToData(path, "\t", indx, indy, indsigma, sigmaMode);
+
+            string name = this.textBox1.Text;
+
+            DataEntry dataEntry = new DataEntry(data, name);
 
         }
     }
