@@ -100,6 +100,7 @@ namespace XPSAnalyzingToolV2
             // 
             this.textBoxLastFile.Location = new System.Drawing.Point(7, 258);
             this.textBoxLastFile.Name = "textBoxLastFile";
+            this.textBoxLastFile.ReadOnly = true;
             this.textBoxLastFile.Size = new System.Drawing.Size(464, 23);
             this.textBoxLastFile.TabIndex = 4;
             // 
