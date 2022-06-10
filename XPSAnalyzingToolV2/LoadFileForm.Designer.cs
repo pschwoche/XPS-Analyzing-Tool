@@ -48,7 +48,7 @@ namespace XPSAnalyzingToolV2
             this.radioButtonSigmaColumn = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -189,6 +189,7 @@ namespace XPSAnalyzingToolV2
             0,
             0,
             0});
+            this.numericUpDownSigma.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDownY
             // 
@@ -201,6 +202,7 @@ namespace XPSAnalyzingToolV2
             0,
             0,
             0});
+            this.numericUpDownY.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // radioButton2
             // 
@@ -221,6 +223,7 @@ namespace XPSAnalyzingToolV2
             this.numericUpDownX.Name = "numericUpDownX";
             this.numericUpDownX.Size = new System.Drawing.Size(47, 23);
             this.numericUpDownX.TabIndex = 11;
+            this.numericUpDownX.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // radioButtonSigmaColumn
             // 
@@ -253,12 +256,12 @@ namespace XPSAnalyzingToolV2
             this.label2.TabIndex = 6;
             this.label2.Text = "X:";
             // 
-            // textBox1
+            // textBoxTitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 464);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(412, 23);
-            this.textBox1.TabIndex = 6;
+            this.textBoxTitle.Location = new System.Drawing.Point(81, 464);
+            this.textBoxTitle.Name = "textBoxTitle";
+            this.textBoxTitle.Size = new System.Drawing.Size(412, 23);
+            this.textBoxTitle.TabIndex = 6;
             // 
             // label5
             // 
@@ -332,7 +335,7 @@ namespace XPSAnalyzingToolV2
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxTitle);
             this.Controls.Add(this.checkBoxComma);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxSeparator);
@@ -372,7 +375,7 @@ namespace XPSAnalyzingToolV2
         private System.Windows.Forms.RadioButton radioButtonSigmaColumn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.Label label5;
         private ZedGraph.ZedGraphControl zedGraphControl1;
         private System.Windows.Forms.RichTextBox richTextBox1;

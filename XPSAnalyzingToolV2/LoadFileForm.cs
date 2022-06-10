@@ -176,9 +176,9 @@ namespace XPSAnalyzingToolV2
                     int indy = Decimal.ToInt32(this.numericUpDownY.Value);
                     int indsigma = Decimal.ToInt32(this.numericUpDownSigma.Value);
 
-                    int sigmaMode = GetRadioButtonIndex();
+                    textBoxTitle.Text = $"{item.Text.Split(".")[0]}-{indx}:{indy}:{indsigma}";
 
-                    PointPairList ppl = this.ParseFileToPPL($"{currentPath}\\{item.Text}", "\t", indx, indy, indsigma, sigmaMode);
+                    PointPairList ppl = this.ParseFileToPPL($"{currentPath}\\{item.Text}", "\t", indx, indy, indsigma);
                     PreviewGraph(ppl);
                 }
             }
@@ -197,7 +197,7 @@ namespace XPSAnalyzingToolV2
             else if (radioButton3.Checked)
             {
                 return 2;
-            }else
+            } else
             {
                 return 2;
             }
@@ -260,7 +260,7 @@ namespace XPSAnalyzingToolV2
             return erg;
         }
         
-        private PointPairList ParseFileToPPL(string path, string delimiter, int indX, int indY, int indSigma, int sigmamode)
+        private PointPairList ParseFileToPPL(string path, string delimiter, int indX, int indY, int indSigma)
         {
             PointPairList ppl = new PointPairList();
             try
@@ -272,7 +272,7 @@ namespace XPSAnalyzingToolV2
 
                     while ((zeile = sr.ReadLine()) != null)
                     {
-                        double x, y, sigma;
+                        double x, y;
                         string[] strValues = zeile.Split(delimiter);
 
                         if(indX >= strValues.Length || indY >= strValues.Length || indSigma >= strValues.Length)
@@ -282,24 +282,8 @@ namespace XPSAnalyzingToolV2
                         Double.TryParse(strValues[indX].Replace('.',','), out x);
                         Double.TryParse(strValues[indY].Replace('.', ','), out y);
 
-                        switch (sigmamode)
-                        {
-                            case 1:
-                                Double.TryParse(strValues[indSigma].Replace('.', ','), out sigma);
-                                break;
-
-                            case 2:
-                                sigma = Math.Max(Math.Sqrt(Math.Abs(y)), 1);
-                                break;
-
-                            case 3:
-                                sigma = 1;
-                                break;
-
-                            default:
-                                throw new Exception("sigmamode is strange...");
-                        }
-                        PointPair pp = new PointPair(x, y, sigma);
+                       
+                        PointPair pp = new PointPair(x, y);
                         ppl.Add(pp);
 
 
@@ -440,20 +424,42 @@ namespace XPSAnalyzingToolV2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try 
+                {
+                int indx = Decimal.ToInt32(this.numericUpDownX.Value);
+                int indy = Decimal.ToInt32(this.numericUpDownY.Value);
+                int indsigma = Decimal.ToInt32(this.numericUpDownSigma.Value);
+
+                int sigmaMode = GetRadioButtonIndex();
+                string path = $"{currentPath}\\{textBoxLastFile.Text}";
+
+                Data data = this.ParseFileToData(path, "\t", indx, indy, indsigma, sigmaMode);
+                if(data == null)
+                {
+                    throw new Exception($"Data is null.");
+                }
+                string name = this.textBoxTitle.Text;
+
+                DataEntry dataEntry = new DataEntry(data, name);
+            } 
+            catch(Exception ex)
+            {
+               var result = MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+
+            PreviewFile($"{currentPath}\\{textBoxLastFile.Text}");
 
             int indx = Decimal.ToInt32(this.numericUpDownX.Value);
             int indy = Decimal.ToInt32(this.numericUpDownY.Value);
             int indsigma = Decimal.ToInt32(this.numericUpDownSigma.Value);
 
-            int sigmaMode = GetRadioButtonIndex();
-            string path = $"{currentPath}\\{textBoxLastFile.Text}";
+            //textBoxTitle.Text = $"{textBoxLastFile.Text.Split(".")[0]}-{indx}:{indy}:{indsigma}";
 
-            Data data = this.ParseFileToData(path, "\t", indx, indy, indsigma, sigmaMode);
-
-            string name = this.textBox1.Text;
-
-            DataEntry dataEntry = new DataEntry(data, name);
-
+            PointPairList ppl = this.ParseFileToPPL($"{currentPath}\\{textBoxLastFile.Text}", "\t", indx, indy, indsigma);
+            PreviewGraph(ppl);
         }
     }
 }
