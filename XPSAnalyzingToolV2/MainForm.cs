@@ -8,16 +8,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace XPSAnalyzingToolV2
+namespace XPSAnalyzingTool
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+
+        public List<DataEntry> dataEntries;
+
+        private ZedGraph.GraphPane bigGraphPane;
+        private ZedGraph.GraphPane smallGraphPane;
+
+
+
+
+        public MainForm()
         {
             InitializeComponent();
 
 
+            InitDataViewGrids();
 
+        }
+
+        private void InitDataViewGrids()
+        {
 
         }
 

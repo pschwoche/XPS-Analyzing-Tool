@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using ZedGraph;
+using XPSAnalyzingTool;
 
-namespace XPSAnalyzingToolV2
+namespace XPSAnalyzingTool
 {
     public partial class LoadFileForm : Form
     {
@@ -54,8 +55,6 @@ namespace XPSAnalyzingToolV2
 
             UpdateExplorer();
         }
-
-
 
         private void UpdateExplorer()
         {
@@ -131,7 +130,6 @@ namespace XPSAnalyzingToolV2
             }
         }
 
-
         private void listViewExplorer_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             ListViewItem item = this.listViewExplorer.GetItemAt(e.X, e.Y);
@@ -178,15 +176,13 @@ namespace XPSAnalyzingToolV2
                     int indy = Decimal.ToInt32(this.numericUpDownY.Value);
                     int indsigma = Decimal.ToInt32(this.numericUpDownSigma.Value);
 
-                    int sigmaMode = GetRadioButtonIndex();
+                    textBoxTitle.Text = $"{item.Text.Split(".")[0]}-{indx}:{indy}:{indsigma}";
 
-                    PointPairList ppl = this.ParseFileToPPL($"{currentPath}\\{item.Text}", "\t", indx, indy, indsigma, sigmaMode);
+                    PointPairList ppl = this.ParseFileToPPL($"{currentPath}\\{item.Text}", "\t", indx, indy, indsigma);
                     PreviewGraph(ppl);
                 }
             }
         }
-
-        
 
         private int GetRadioButtonIndex()
         {
@@ -201,14 +197,11 @@ namespace XPSAnalyzingToolV2
             else if (radioButton3.Checked)
             {
                 return 2;
-            }else
+            } else
             {
                 return 2;
             }
         }
-
-
-
 
         private void PreviewFile(string path)
         {
@@ -234,12 +227,10 @@ namespace XPSAnalyzingToolV2
             }
         }
 
-
         private void comboBoxFileFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateExplorer();
         }
-
 
         private void PreviewGraph(PointPairList ppl)
         {
@@ -256,6 +247,7 @@ namespace XPSAnalyzingToolV2
             zedGraphControl1.Refresh();
 
         }
+
         private PointPairList ReducePPL(PointPairList ppl)
         {
             PointPairList erg = new PointPairList();
@@ -268,7 +260,7 @@ namespace XPSAnalyzingToolV2
             return erg;
         }
         
-        private PointPairList ParseFileToPPL(string path, string delimiter, int indX, int indY, int indSigma, int sigmamode)
+        private PointPairList ParseFileToPPL(string path, string delimiter, int indX, int indY, int indSigma)
         {
             PointPairList ppl = new PointPairList();
             try
@@ -280,7 +272,7 @@ namespace XPSAnalyzingToolV2
 
                     while ((zeile = sr.ReadLine()) != null)
                     {
-                        double x, y, sigma;
+                        double x, y;
                         string[] strValues = zeile.Split(delimiter);
 
                         if(indX >= strValues.Length || indY >= strValues.Length || indSigma >= strValues.Length)
@@ -288,6 +280,50 @@ namespace XPSAnalyzingToolV2
                             throw new Exception("Index out of range!");
                         }
                         Double.TryParse(strValues[indX].Replace('.',','), out x);
+                        Double.TryParse(strValues[indY].Replace('.', ','), out y);
+
+                       
+                        PointPair pp = new PointPair(x, y);
+                        ppl.Add(pp);
+
+
+                    }
+
+                    sr.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"{ex.Message}");
+                return null;
+            }
+            ppl.Sort();
+            return ppl;
+
+        }
+
+        private Data ParseFileToData(string path, string delimiter, int indX, int indY, int indSigma, int sigmamode)
+        {
+            try
+            {
+                List<double> xlist = new List<double>();
+                List<double> ylist = new List<double>();
+                List<double> errorlist = new List<double>();
+
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    string zeile;
+
+                    while ((zeile = sr.ReadLine()) != null)
+                    {
+                        double x, y, sigma;
+                        string[] strValues = zeile.Split(delimiter);
+
+                        if (indX >= strValues.Length || indY >= strValues.Length || indSigma >= strValues.Length)
+                        {
+                            throw new Exception("Index out of range!");
+                        }
+                        Double.TryParse(strValues[indX].Replace('.', ','), out x);
                         Double.TryParse(strValues[indY].Replace('.', ','), out y);
 
                         switch (sigmamode)
@@ -307,80 +343,66 @@ namespace XPSAnalyzingToolV2
                             default:
                                 throw new Exception("sigmamode is strange...");
                         }
-                        PointPair pp = new PointPair(x, y, sigma);
-                        ppl.Add(pp);
-
-
+                        xlist.Add(x);
+                        ylist.Add(y);
+                        errorlist.Add(sigma);
                     }
-
                     sr.Close();
+
                 }
+
+                double[] xarray = xlist.ToArray();
+                double[] yarray = ylist.ToArray();
+                double[] errorarray = errorlist.ToArray();
+
+                return new Data(xarray, yarray, errorarray);
+
             }
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine($"{ex.Message}");
                 return null;
             }
-            ppl.Sort();
-            return ppl;
-
         }
 
-        private void radioButtonSigmaColumn_MouseClick(object sender, MouseEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void radioButton2_MouseClick(object sender, MouseEventArgs e)
-        {
-        }
-
-        private void radioButton3_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void radioButtonSigmaColumn_CheckedChanged(object sender, EventArgs e)
-        {
-
-            System.Diagnostics.Debug.WriteLine($"{radioButtonSigmaColumn.Checked}");
-
-
-            /*if (!this.radioButtonSigmaColumn.Checked) // not checked
-            {
-                this.radioButtonSigmaColumn.Checked = true; // checked
-                this.radioButton2.Checked = false;
-                this.radioButton3.Checked = false;
-                System.Diagnostics.Debug.WriteLine($"{textBoxLastFile.Text}");
-                if (!textBoxLastFile.Text.Equals(""))
+            try 
                 {
+                int indx = Decimal.ToInt32(this.numericUpDownX.Value);
+                int indy = Decimal.ToInt32(this.numericUpDownY.Value);
+                int indsigma = Decimal.ToInt32(this.numericUpDownSigma.Value);
 
-                    System.Diagnostics.Debug.WriteLine($"Blubb1");
-                    string path = $"{currentPath}\\{textBoxLastFile.Text}";
-                    //System.Diagnostics.Debug.WriteLine($"{currentPath}\\{item.Text}");
+                int sigmaMode = GetRadioButtonIndex();
+                string path = $"{currentPath}\\{textBoxLastFile.Text}";
 
-                    int indx = Decimal.ToInt32(this.numericUpDownX.Value);
-                    int indy = Decimal.ToInt32(this.numericUpDownY.Value);
-                    int indsigma = Decimal.ToInt32(this.numericUpDownSigma.Value);
-
-                    PointPairList ppl = this.ParseFileToPPL(path, "\t", indx, indy, indsigma, 1);
-                    PreviewGraph(ppl);
+                Data data = this.ParseFileToData(path, "\t", indx, indy, indsigma, sigmaMode);
+                if(data == null)
+                {
+                    throw new Exception($"Data is null.");
                 }
-            }
-            else
+                string name = this.textBoxTitle.Text;
+
+                DataEntry dataEntry = new DataEntry(data, name);
+            } 
+            catch(Exception ex)
             {
-                return;
-            }*/
+               var result = MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void numericUpDown_ValueChanged(object sender, EventArgs e)
         {
 
-        }
+            PreviewFile($"{currentPath}\\{textBoxLastFile.Text}");
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
+            int indx = Decimal.ToInt32(this.numericUpDownX.Value);
+            int indy = Decimal.ToInt32(this.numericUpDownY.Value);
+            int indsigma = Decimal.ToInt32(this.numericUpDownSigma.Value);
 
+            textBoxTitle.Text = $"{textBoxLastFile.Text.Split(".")[0]}-{indx}:{indy}:{indsigma}";
+            PointPairList ppl = this.ParseFileToPPL($"{currentPath}\\{textBoxLastFile.Text}", "\t", indx, indy, indsigma);
+            PreviewGraph(ppl);
         }
     }
 }

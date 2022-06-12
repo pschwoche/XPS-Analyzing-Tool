@@ -1,5 +1,5 @@
 ﻿
-namespace XPSAnalyzingToolV2
+namespace XPSAnalyzingTool
 {
     partial class LoadFileForm
     {
@@ -48,7 +48,7 @@ namespace XPSAnalyzingToolV2
             this.radioButtonSigmaColumn = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -100,6 +100,7 @@ namespace XPSAnalyzingToolV2
             // 
             this.textBoxLastFile.Location = new System.Drawing.Point(7, 258);
             this.textBoxLastFile.Name = "textBoxLastFile";
+            this.textBoxLastFile.ReadOnly = true;
             this.textBoxLastFile.Size = new System.Drawing.Size(464, 23);
             this.textBoxLastFile.TabIndex = 4;
             // 
@@ -166,8 +167,6 @@ namespace XPSAnalyzingToolV2
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "σ = 1";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
-            this.radioButton3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.radioButton3_MouseClick);
             // 
             // label4
             // 
@@ -189,6 +188,7 @@ namespace XPSAnalyzingToolV2
             0,
             0,
             0});
+            this.numericUpDownSigma.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDownY
             // 
@@ -201,6 +201,7 @@ namespace XPSAnalyzingToolV2
             0,
             0,
             0});
+            this.numericUpDownY.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // radioButton2
             // 
@@ -212,8 +213,6 @@ namespace XPSAnalyzingToolV2
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "σ = max(√Y, 1) or";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            this.radioButton2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.radioButton2_MouseClick);
             // 
             // numericUpDownX
             // 
@@ -221,6 +220,7 @@ namespace XPSAnalyzingToolV2
             this.numericUpDownX.Name = "numericUpDownX";
             this.numericUpDownX.Size = new System.Drawing.Size(47, 23);
             this.numericUpDownX.TabIndex = 11;
+            this.numericUpDownX.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // radioButtonSigmaColumn
             // 
@@ -232,8 +232,6 @@ namespace XPSAnalyzingToolV2
             this.radioButtonSigmaColumn.TabStop = true;
             this.radioButtonSigmaColumn.Text = "σ";
             this.radioButtonSigmaColumn.UseVisualStyleBackColor = true;
-            this.radioButtonSigmaColumn.CheckedChanged += new System.EventHandler(this.radioButtonSigmaColumn_CheckedChanged);
-            this.radioButtonSigmaColumn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.radioButtonSigmaColumn_MouseClick);
             // 
             // label3
             // 
@@ -253,12 +251,12 @@ namespace XPSAnalyzingToolV2
             this.label2.TabIndex = 6;
             this.label2.Text = "X:";
             // 
-            // textBox1
+            // textBoxTitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 464);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(412, 23);
-            this.textBox1.TabIndex = 6;
+            this.textBoxTitle.Location = new System.Drawing.Point(81, 464);
+            this.textBoxTitle.Name = "textBoxTitle";
+            this.textBoxTitle.Size = new System.Drawing.Size(412, 23);
+            this.textBoxTitle.TabIndex = 6;
             // 
             // label5
             // 
@@ -312,6 +310,7 @@ namespace XPSAnalyzingToolV2
             this.button1.TabIndex = 10;
             this.button1.Text = "Open";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -331,7 +330,7 @@ namespace XPSAnalyzingToolV2
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxTitle);
             this.Controls.Add(this.checkBoxComma);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxSeparator);
@@ -371,7 +370,7 @@ namespace XPSAnalyzingToolV2
         private System.Windows.Forms.RadioButton radioButtonSigmaColumn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.Label label5;
         private ZedGraph.ZedGraphControl zedGraphControl1;
         private System.Windows.Forms.RichTextBox richTextBox1;

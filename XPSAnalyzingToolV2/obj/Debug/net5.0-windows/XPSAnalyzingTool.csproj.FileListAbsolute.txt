@@ -31,3 +31,4 @@ C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\
 C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\ref\XPSAnalyzingTool.dll
 C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.pdb
 C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.genruntimeconfig.cache
+C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.csproj.AssemblyReference.cache
