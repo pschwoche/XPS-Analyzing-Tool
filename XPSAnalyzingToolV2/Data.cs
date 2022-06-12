@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ZedGraph;
 
-namespace XPSAnalyzingToolV2
+namespace XPSAnalyzingTool
 {
     public class Data
     {

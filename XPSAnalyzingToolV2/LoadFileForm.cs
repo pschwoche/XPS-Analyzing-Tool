@@ -11,7 +11,7 @@ using System.IO;
 using ZedGraph;
 using XPSAnalyzingTool;
 
-namespace XPSAnalyzingToolV2
+namespace XPSAnalyzingTool
 {
     public partial class LoadFileForm : Form
     {
@@ -365,63 +365,6 @@ namespace XPSAnalyzingToolV2
             }
         }
 
-        private void radioButtonSigmaColumn_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void radioButton2_MouseClick(object sender, MouseEventArgs e)
-        {
-        }
-
-        private void radioButton3_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void radioButtonSigmaColumn_CheckedChanged(object sender, EventArgs e)
-        {
-
-            System.Diagnostics.Debug.WriteLine($"{radioButtonSigmaColumn.Checked}");
-
-
-            /*if (!this.radioButtonSigmaColumn.Checked) // not checked
-            {
-                this.radioButtonSigmaColumn.Checked = true; // checked
-                this.radioButton2.Checked = false;
-                this.radioButton3.Checked = false;
-                System.Diagnostics.Debug.WriteLine($"{textBoxLastFile.Text}");
-                if (!textBoxLastFile.Text.Equals(""))
-                {
-
-                    System.Diagnostics.Debug.WriteLine($"Blubb1");
-                    string path = $"{currentPath}\\{textBoxLastFile.Text}";
-                    //System.Diagnostics.Debug.WriteLine($"{currentPath}\\{item.Text}");
-
-                    int indx = Decimal.ToInt32(this.numericUpDownX.Value);
-                    int indy = Decimal.ToInt32(this.numericUpDownY.Value);
-                    int indsigma = Decimal.ToInt32(this.numericUpDownSigma.Value);
-
-                    PointPairList ppl = this.ParseFileToPPL(path, "\t", indx, indy, indsigma, 1);
-                    PreviewGraph(ppl);
-                }
-            }
-            else
-            {
-                return;
-            }*/
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             try 
@@ -447,6 +390,7 @@ namespace XPSAnalyzingToolV2
                var result = MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
         {
 
@@ -456,8 +400,7 @@ namespace XPSAnalyzingToolV2
             int indy = Decimal.ToInt32(this.numericUpDownY.Value);
             int indsigma = Decimal.ToInt32(this.numericUpDownSigma.Value);
 
-            //textBoxTitle.Text = $"{textBoxLastFile.Text.Split(".")[0]}-{indx}:{indy}:{indsigma}";
-
+            textBoxTitle.Text = $"{textBoxLastFile.Text.Split(".")[0]}-{indx}:{indy}:{indsigma}";
             PointPairList ppl = this.ParseFileToPPL($"{currentPath}\\{textBoxLastFile.Text}", "\t", indx, indy, indsigma);
             PreviewGraph(ppl);
         }

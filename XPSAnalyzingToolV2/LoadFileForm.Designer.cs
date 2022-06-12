@@ -1,5 +1,5 @@
 ﻿
-namespace XPSAnalyzingToolV2
+namespace XPSAnalyzingTool
 {
     partial class LoadFileForm
     {
@@ -167,8 +167,6 @@ namespace XPSAnalyzingToolV2
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "σ = 1";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
-            this.radioButton3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.radioButton3_MouseClick);
             // 
             // label4
             // 
@@ -215,8 +213,6 @@ namespace XPSAnalyzingToolV2
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "σ = max(√Y, 1) or";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            this.radioButton2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.radioButton2_MouseClick);
             // 
             // numericUpDownX
             // 
@@ -236,8 +232,6 @@ namespace XPSAnalyzingToolV2
             this.radioButtonSigmaColumn.TabStop = true;
             this.radioButtonSigmaColumn.Text = "σ";
             this.radioButtonSigmaColumn.UseVisualStyleBackColor = true;
-            this.radioButtonSigmaColumn.CheckedChanged += new System.EventHandler(this.radioButtonSigmaColumn_CheckedChanged);
-            this.radioButtonSigmaColumn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.radioButtonSigmaColumn_MouseClick);
             // 
             // label3
             // 
