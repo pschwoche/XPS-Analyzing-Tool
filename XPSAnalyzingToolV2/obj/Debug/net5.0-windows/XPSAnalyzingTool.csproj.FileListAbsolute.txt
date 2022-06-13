@@ -19,8 +19,6 @@ C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\
 C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\tr\ZedGraph.resources.dll
 C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\zh-cn\ZedGraph.resources.dll
 C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\zh-tw\ZedGraph.resources.dll
-C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingToolV2.Form1.resources
-C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingToolV2.LoadFileForm.resources
 C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.csproj.GenerateResource.cache
 C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.AssemblyInfoInputs.cache
@@ -32,3 +30,5 @@ C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\
 C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.pdb
 C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.genruntimeconfig.cache
 C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.csproj.AssemblyReference.cache
+C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.LoadFileForm.resources
+C:\Users\pschw\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.MainForm.resources

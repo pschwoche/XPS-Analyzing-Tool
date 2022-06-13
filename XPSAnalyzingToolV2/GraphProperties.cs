@@ -15,18 +15,20 @@ namespace XPSAnalyzingTool
         public ErrorBarItem Errorbaritem { get; }
         public bool IsVisible { set; get; }
 
+        public int VisibleOffset { set; get; }
+
         public GraphProperties(string name)
         {
 
             LineItem = new LineItem(name);
             Errorbaritem = new ErrorBarItem(name);
-
             SetDefaults();
         }
 
         private void SetDefaults()
         {
             IsVisible = true;
+            VisibleOffset = 0;
 
             LineItem.Line.Color = Color.Blue;
             LineItem.Line.IsVisible = false;

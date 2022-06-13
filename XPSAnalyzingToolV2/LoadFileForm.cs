@@ -19,7 +19,7 @@ namespace XPSAnalyzingTool
         private string PATH2FOLDERICON = $"{Directory.GetCurrentDirectory()}\\Foldericon.ico";
         private string currentPath;
         ImageList imageList1;
-
+        private MainForm mainform;
         private string[] FILTERS =
         {
             "All Files (\".\")",
@@ -33,8 +33,9 @@ namespace XPSAnalyzingTool
             "dat"
         };
 
-        public LoadFileForm()
+        public LoadFileForm(MainForm mainform)
         {
+            this.mainform = mainform;
             InitializeComponent();
             Init();
 
@@ -365,10 +366,11 @@ namespace XPSAnalyzingTool
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void btnOpen_Click(object sender, EventArgs e)
         {
-            try 
-                {
+            try
+            {
                 int indx = Decimal.ToInt32(this.numericUpDownX.Value);
                 int indy = Decimal.ToInt32(this.numericUpDownY.Value);
                 int indsigma = Decimal.ToInt32(this.numericUpDownSigma.Value);
@@ -377,18 +379,21 @@ namespace XPSAnalyzingTool
                 string path = $"{currentPath}\\{textBoxLastFile.Text}";
 
                 Data data = this.ParseFileToData(path, "\t", indx, indy, indsigma, sigmaMode);
-                if(data == null)
+                if (data == null)
                 {
                     throw new Exception($"Data is null.");
                 }
                 string name = this.textBoxTitle.Text;
 
-                DataEntry dataEntry = new DataEntry(data, name);
-            } 
-            catch(Exception ex)
-            {
-               var result = MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mainform.AddDataEntry(new DataEntry(data, name));
+                this.Close();
+
             }
+            catch (Exception ex)
+            {
+                var result = MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
@@ -403,6 +408,11 @@ namespace XPSAnalyzingTool
             textBoxTitle.Text = $"{textBoxLastFile.Text.Split(".")[0]}-{indx}:{indy}:{indsigma}";
             PointPairList ppl = this.ParseFileToPPL($"{currentPath}\\{textBoxLastFile.Text}", "\t", indx, indy, indsigma);
             PreviewGraph(ppl);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

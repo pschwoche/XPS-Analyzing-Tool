@@ -36,24 +36,24 @@ namespace XPSAnalyzingTool
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
             this.groupBoxGraphVisuals = new System.Windows.Forms.GroupBox();
-            this.checkBoxVisibleData = new System.Windows.Forms.CheckBox();
-            this.btnColorData = new System.Windows.Forms.Button();
-            this.btnMarker = new System.Windows.Forms.Button();
-            this.numericUpDownHeightOffsetData = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnRemoveData = new System.Windows.Forms.Button();
+            this.btnRenameData = new System.Windows.Forms.Button();
             this.btnSaveData = new System.Windows.Forms.Button();
+            this.btnRemoveData = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnMarker = new System.Windows.Forms.Button();
+            this.checkBoxVisibleData = new System.Windows.Forms.CheckBox();
+            this.numericUpDownHeightOffsetData = new System.Windows.Forms.NumericUpDown();
+            this.btnColorData = new System.Windows.Forms.Button();
             this.zedGraphControl2 = new ZedGraph.ZedGraphControl();
             this.dataGridViewFit = new System.Windows.Forms.DataGridView();
             this.groupBoxFitVisuals = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnSaveFit = new System.Windows.Forms.Button();
+            this.btnRemoveFit = new System.Windows.Forms.Button();
+            this.numericUpDownHeightOffsetFit = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.checkBoxVisibleFit = new System.Windows.Forms.CheckBox();
             this.btnColorFit = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDownHeightOffsetFit = new System.Windows.Forms.NumericUpDown();
-            this.btnRemoveFit = new System.Windows.Forms.Button();
-            this.btnSaveFit = new System.Windows.Forms.Button();
-            this.btnRenameData = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.groupBoxGraphVisuals.SuspendLayout();
@@ -118,6 +118,7 @@ namespace XPSAnalyzingTool
             this.dataGridViewData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewData.Size = new System.Drawing.Size(303, 225);
             this.dataGridViewData.TabIndex = 2;
+            this.dataGridViewData.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewData_MouseDown);
             // 
             // groupBoxGraphVisuals
             // 
@@ -136,41 +137,33 @@ namespace XPSAnalyzingTool
             this.groupBoxGraphVisuals.TabStop = false;
             this.groupBoxGraphVisuals.Text = "Graph Visuals";
             // 
-            // checkBoxVisibleData
+            // btnRenameData
             // 
-            this.checkBoxVisibleData.AutoSize = true;
-            this.checkBoxVisibleData.Location = new System.Drawing.Point(6, 22);
-            this.checkBoxVisibleData.Name = "checkBoxVisibleData";
-            this.checkBoxVisibleData.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkBoxVisibleData.Size = new System.Drawing.Size(60, 19);
-            this.checkBoxVisibleData.TabIndex = 0;
-            this.checkBoxVisibleData.Text = "Visible";
-            this.checkBoxVisibleData.UseVisualStyleBackColor = true;
+            this.btnRenameData.Location = new System.Drawing.Point(108, 88);
+            this.btnRenameData.Name = "btnRenameData";
+            this.btnRenameData.Size = new System.Drawing.Size(75, 23);
+            this.btnRenameData.TabIndex = 7;
+            this.btnRenameData.Text = "Rename...";
+            this.btnRenameData.UseVisualStyleBackColor = true;
             // 
-            // btnColorData
+            // btnSaveData
             // 
-            this.btnColorData.Location = new System.Drawing.Point(108, 19);
-            this.btnColorData.Name = "btnColorData";
-            this.btnColorData.Size = new System.Drawing.Size(75, 23);
-            this.btnColorData.TabIndex = 1;
-            this.btnColorData.Text = "Color...";
-            this.btnColorData.UseVisualStyleBackColor = true;
+            this.btnSaveData.Location = new System.Drawing.Point(203, 88);
+            this.btnSaveData.Name = "btnSaveData";
+            this.btnSaveData.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveData.TabIndex = 6;
+            this.btnSaveData.Text = "Save Data...";
+            this.btnSaveData.UseVisualStyleBackColor = true;
             // 
-            // btnMarker
+            // btnRemoveData
             // 
-            this.btnMarker.Location = new System.Drawing.Point(203, 19);
-            this.btnMarker.Name = "btnMarker";
-            this.btnMarker.Size = new System.Drawing.Size(75, 23);
-            this.btnMarker.TabIndex = 2;
-            this.btnMarker.Text = "Marker...";
-            this.btnMarker.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDownHeightOffsetData
-            // 
-            this.numericUpDownHeightOffsetData.Location = new System.Drawing.Point(108, 48);
-            this.numericUpDownHeightOffsetData.Name = "numericUpDownHeightOffsetData";
-            this.numericUpDownHeightOffsetData.Size = new System.Drawing.Size(41, 23);
-            this.numericUpDownHeightOffsetData.TabIndex = 3;
+            this.btnRemoveData.Location = new System.Drawing.Point(10, 88);
+            this.btnRemoveData.Name = "btnRemoveData";
+            this.btnRemoveData.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveData.TabIndex = 5;
+            this.btnRemoveData.Text = "Remove";
+            this.btnRemoveData.UseVisualStyleBackColor = true;
+            this.btnRemoveData.Click += new System.EventHandler(this.btnRemoveData_Click);
             // 
             // label1
             // 
@@ -181,23 +174,49 @@ namespace XPSAnalyzingTool
             this.label1.TabIndex = 4;
             this.label1.Text = "Visible Offset:";
             // 
-            // btnRemoveData
+            // btnMarker
             // 
-            this.btnRemoveData.Location = new System.Drawing.Point(10, 88);
-            this.btnRemoveData.Name = "btnRemoveData";
-            this.btnRemoveData.Size = new System.Drawing.Size(75, 23);
-            this.btnRemoveData.TabIndex = 5;
-            this.btnRemoveData.Text = "Remove";
-            this.btnRemoveData.UseVisualStyleBackColor = true;
+            this.btnMarker.Location = new System.Drawing.Point(203, 19);
+            this.btnMarker.Name = "btnMarker";
+            this.btnMarker.Size = new System.Drawing.Size(75, 23);
+            this.btnMarker.TabIndex = 2;
+            this.btnMarker.Text = "Marker...";
+            this.btnMarker.UseVisualStyleBackColor = true;
             // 
-            // btnSaveData
+            // checkBoxVisibleData
             // 
-            this.btnSaveData.Location = new System.Drawing.Point(203, 88);
-            this.btnSaveData.Name = "btnSaveData";
-            this.btnSaveData.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveData.TabIndex = 6;
-            this.btnSaveData.Text = "Save Data...";
-            this.btnSaveData.UseVisualStyleBackColor = true;
+            this.checkBoxVisibleData.AutoSize = true;
+            this.checkBoxVisibleData.Location = new System.Drawing.Point(6, 22);
+            this.checkBoxVisibleData.Name = "checkBoxVisibleData";
+            this.checkBoxVisibleData.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBoxVisibleData.Size = new System.Drawing.Size(60, 19);
+            this.checkBoxVisibleData.TabIndex = 0;
+            this.checkBoxVisibleData.Text = "Visible";
+            this.checkBoxVisibleData.UseVisualStyleBackColor = true;
+            this.checkBoxVisibleData.Click += new System.EventHandler(this.checkBoxVisibleData_Click);
+            // 
+            // numericUpDownHeightOffsetData
+            // 
+            this.numericUpDownHeightOffsetData.Location = new System.Drawing.Point(108, 48);
+            this.numericUpDownHeightOffsetData.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numericUpDownHeightOffsetData.Name = "numericUpDownHeightOffsetData";
+            this.numericUpDownHeightOffsetData.Size = new System.Drawing.Size(59, 23);
+            this.numericUpDownHeightOffsetData.TabIndex = 3;
+            this.numericUpDownHeightOffsetData.Click += new System.EventHandler(this.numericUpDownHeightOffsetData_Click);
+            this.numericUpDownHeightOffsetData.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericUpDownHeightOffsetData_KeyPress);
+            // 
+            // btnColorData
+            // 
+            this.btnColorData.Location = new System.Drawing.Point(108, 19);
+            this.btnColorData.Name = "btnColorData";
+            this.btnColorData.Size = new System.Drawing.Size(75, 23);
+            this.btnColorData.TabIndex = 1;
+            this.btnColorData.Text = "Color...";
+            this.btnColorData.UseVisualStyleBackColor = true;
             // 
             // zedGraphControl2
             // 
@@ -245,6 +264,49 @@ namespace XPSAnalyzingTool
             this.groupBoxFitVisuals.TabStop = false;
             this.groupBoxFitVisuals.Text = "Fit Visuals";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(108, 81);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Rename...";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnSaveFit
+            // 
+            this.btnSaveFit.Location = new System.Drawing.Point(203, 81);
+            this.btnSaveFit.Name = "btnSaveFit";
+            this.btnSaveFit.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveFit.TabIndex = 10;
+            this.btnSaveFit.Text = "Save Fit...";
+            this.btnSaveFit.UseVisualStyleBackColor = true;
+            // 
+            // btnRemoveFit
+            // 
+            this.btnRemoveFit.Location = new System.Drawing.Point(6, 81);
+            this.btnRemoveFit.Name = "btnRemoveFit";
+            this.btnRemoveFit.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveFit.TabIndex = 9;
+            this.btnRemoveFit.Text = "Remove";
+            this.btnRemoveFit.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDownHeightOffsetFit
+            // 
+            this.numericUpDownHeightOffsetFit.Location = new System.Drawing.Point(108, 49);
+            this.numericUpDownHeightOffsetFit.Name = "numericUpDownHeightOffsetFit";
+            this.numericUpDownHeightOffsetFit.Size = new System.Drawing.Size(59, 23);
+            this.numericUpDownHeightOffsetFit.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 15);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Visible Offset:";
+            // 
             // checkBoxVisibleFit
             // 
             this.checkBoxVisibleFit.AutoSize = true;
@@ -264,59 +326,7 @@ namespace XPSAnalyzingTool
             this.btnColorFit.Text = "Color...";
             this.btnColorFit.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 15);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Visible Offset:";
-            // 
-            // numericUpDownHeightOffsetFit
-            // 
-            this.numericUpDownHeightOffsetFit.Location = new System.Drawing.Point(108, 49);
-            this.numericUpDownHeightOffsetFit.Name = "numericUpDownHeightOffsetFit";
-            this.numericUpDownHeightOffsetFit.Size = new System.Drawing.Size(41, 23);
-            this.numericUpDownHeightOffsetFit.TabIndex = 7;
-            // 
-            // btnRemoveFit
-            // 
-            this.btnRemoveFit.Location = new System.Drawing.Point(6, 81);
-            this.btnRemoveFit.Name = "btnRemoveFit";
-            this.btnRemoveFit.Size = new System.Drawing.Size(75, 23);
-            this.btnRemoveFit.TabIndex = 9;
-            this.btnRemoveFit.Text = "Remove";
-            this.btnRemoveFit.UseVisualStyleBackColor = true;
-            // 
-            // btnSaveFit
-            // 
-            this.btnSaveFit.Location = new System.Drawing.Point(203, 81);
-            this.btnSaveFit.Name = "btnSaveFit";
-            this.btnSaveFit.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveFit.TabIndex = 10;
-            this.btnSaveFit.Text = "Save Fit...";
-            this.btnSaveFit.UseVisualStyleBackColor = true;
-            // 
-            // btnRenameData
-            // 
-            this.btnRenameData.Location = new System.Drawing.Point(108, 88);
-            this.btnRenameData.Name = "btnRenameData";
-            this.btnRenameData.Size = new System.Drawing.Size(75, 23);
-            this.btnRenameData.TabIndex = 7;
-            this.btnRenameData.Text = "Rename...";
-            this.btnRenameData.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(108, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Rename...";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -329,7 +339,7 @@ namespace XPSAnalyzingTool
             this.Controls.Add(this.zedGraphControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
