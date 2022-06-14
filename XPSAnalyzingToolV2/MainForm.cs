@@ -20,6 +20,8 @@ namespace XPSAnalyzingTool
         private ZedGraph.GraphPane smallGraphPane;
 
 
+        ContextMenuStrip contextMenuStrip_DataGridViewData;
+        ToolStripMenuItem tsmi_DataGridView_Background, tsmi_DataGridView_Fit, tsmi_DataGridView_Info;
 
 
         public MainForm()
@@ -33,6 +35,7 @@ namespace XPSAnalyzingTool
 
 
             InitDataGridViews();
+            InitContextMenu__DataGridViewData();
             InitZedGraphs();
 
         }
@@ -48,6 +51,44 @@ namespace XPSAnalyzingTool
         }
 
 
+        private void InitContextMenu__DataGridViewData()
+        {
+            contextMenuStrip_DataGridViewData = new ContextMenuStrip();
+
+            tsmi_DataGridView_Background = new ToolStripMenuItem("Background Substraction...");
+            tsmi_DataGridView_Background.Click += tsmi_DataGridView_Background_Click;
+            contextMenuStrip_DataGridViewData.Items.Add(tsmi_DataGridView_Background);
+
+            tsmi_DataGridView_Fit = new ToolStripMenuItem("Fit...");
+            tsmi_DataGridView_Fit.Click += tsmi_DataGridView_Fit_Click;
+            contextMenuStrip_DataGridViewData.Items.Add(tsmi_DataGridView_Fit);
+
+            tsmi_DataGridView_Info = new ToolStripMenuItem("Info");
+            tsmi_DataGridView_Info.Click += tsmi_DataGridView_Info_Click;
+            contextMenuStrip_DataGridViewData.Items.Add(tsmi_DataGridView_Info);
+
+
+        }
+
+
+        private void tsmi_DataGridView_Info_Click(object sender, EventArgs e)
+        {
+            DataGridViewCell currentCell = this.dataGridViewData.CurrentCell;
+            System.Diagnostics.Debug.WriteLine(this.dataEntries[currentCell.RowIndex].GraphProperties.LineItem.Label.Text);
+           
+        }
+
+
+        private void tsmi_DataGridView_Fit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void tsmi_DataGridView_Background_Click(object sender, EventArgs e)
+        {
+
+        }
 
 
         private void InitDataGridViews()
@@ -178,30 +219,25 @@ namespace XPSAnalyzingTool
                     this.numericUpDownHeightOffsetData.Value = this.dataEntries[currentMouseOverRow].GraphProperties.VisibleOffset;
                     this.groupBoxGraphVisuals.Enabled = true;
 
-                    /*if (this.dataGridViewData.SelectedRows.Count == 0)
-                    {
-                        this.groupBoxGraphVisuals.Enabled = false;
-                    }*/
-
-
-                    /*if (this.dataGridViewData.CurrentCell.RowIndex == -1)
-                    {
-                        this.groupBoxGraphVisuals.Enabled = false;
-                    }*/
-                        /*
-                        if (this.dataGridViewData.CurrentCell.RowIndex != -1)
-                        {
-                            this.groupBoxGraphVisuals.Enabled = true;
-
-                        } else
-                        {
-                            this.groupBoxGraphVisuals.Enabled = false;
-                        }
-                        */
-                        // dataGridViewData.Rows[currentMouseOverRow].Cells[currentMouseOverColumn].Selected = true;
-
                     }
             }
+
+            if (e.Button == MouseButtons.Right)
+            {
+                //select the item under the mouse pointer
+                int currentMouseOverRow = dataGridViewData.HitTest(e.X, e.Y).RowIndex;
+                int currentMouseOverColumn = dataGridViewData.HitTest(e.X, e.Y).ColumnIndex;
+                if (currentMouseOverRow != -1 && currentMouseOverColumn != -1)
+                {
+                    dataGridViewData.ClearSelection();
+                    dataGridViewData.Rows[currentMouseOverRow].Selected = true;
+                    dataGridViewData.CurrentCell = dataGridViewData.Rows[currentMouseOverRow].Cells[currentMouseOverColumn];
+                   // dataGridViewData.Rows[currentMouseOverRow].Cells[currentMouseOverColumn].Selected = true;
+                    contextMenuStrip_DataGridViewData.Show(dataGridViewData, dataGridViewData.PointToClient(Cursor.Position));
+                }
+            }
+
+
         }
 
         private void btnRemoveData_Click(object sender, EventArgs e)
@@ -246,5 +282,9 @@ namespace XPSAnalyzingTool
                 this.updateGraphs();
             }
         }
+
+
+
+
     }
 }
