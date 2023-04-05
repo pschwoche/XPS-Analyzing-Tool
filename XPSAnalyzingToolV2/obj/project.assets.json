@@ -5,10 +5,14 @@
       "ZedGraph/5.1.7": {
         "type": "package",
         "compile": {
-          "lib/net35-Client/ZedGraph.dll": {}
+          "lib/net35-Client/ZedGraph.dll": {
+            "related": ".XML"
+          }
         },
         "runtime": {
-          "lib/net35-Client/ZedGraph.dll": {}
+          "lib/net35-Client/ZedGraph.dll": {
+            "related": ".XML"
+          }
         },
         "resource": {
           "lib/net35-Client/de/ZedGraph.resources.dll": {
@@ -94,18 +98,18 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
+      "projectUniqueName": "C:\\Users\\pschw\\source\\repos\\pschwoche\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
       "projectName": "XPSAnalyzingTool",
-      "projectPath": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
+      "projectPath": "C:\\Users\\pschw\\source\\repos\\pschwoche\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
       "packagesPath": "C:\\Users\\pschw\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\obj\\",
+      "outputPath": "C:\\Users\\pschw\\source\\repos\\pschwoche\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pschw\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0-windows7.0"
+        "net5.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -138,7 +142,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -150,7 +155,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -159,7 +164,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Das Paket \"ZedGraph 5.1.7\" wurde nicht mit dem Projektzielframework \"net5.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "message": "Das Paket \"ZedGraph 5.1.7\" wurde nicht mit dem Projektzielframework \"net5.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "ZedGraph",
       "targetGraphs": [
         "net5.0-windows7.0"

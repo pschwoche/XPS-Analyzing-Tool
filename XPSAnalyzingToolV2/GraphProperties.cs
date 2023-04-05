@@ -27,7 +27,6 @@ namespace XPSAnalyzingTool
         private void SetDefaults()
         {
             IsVisible = true;
-
             LineItem.Line.Color = Color.Blue;
             LineItem.Line.IsVisible = false;
             LineItem.Symbol.Type = SymbolType.Circle;

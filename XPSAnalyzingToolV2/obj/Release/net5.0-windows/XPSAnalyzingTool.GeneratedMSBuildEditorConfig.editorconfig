@@ -14,4 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = XPSAnalyzingTool
-build_property.ProjectDir = C:\Users\pschw\source\repos\pschwoche\XPS-Analyzing-Tool\XPSAnalyzingToolV2\
+build_property.ProjectDir = C:\Users\pschw\Source\Repos\pschwoche\XPS-Analyzing-Tool\XPSAnalyzingToolV2\

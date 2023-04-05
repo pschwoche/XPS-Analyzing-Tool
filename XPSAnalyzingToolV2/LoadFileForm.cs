@@ -19,6 +19,7 @@ namespace XPSAnalyzingTool
         private string PATH2FOLDERICON = $"{Directory.GetCurrentDirectory()}\\Foldericon.ico";
         private string currentPath;
         ImageList imageList1;
+        MainForm mainForm;
 
         private string[] FILTERS =
         {
@@ -33,13 +34,13 @@ namespace XPSAnalyzingTool
             "dat"
         };
 
-        public LoadFileForm()
+        public LoadFileForm(MainForm mainForm)
         {
             InitializeComponent();
             Init();
 
             this.Visible = true;
-
+            this.mainForm = mainForm;
         }
 
         private void Init()
@@ -383,12 +384,14 @@ namespace XPSAnalyzingTool
                 }
                 string name = this.textBoxTitle.Text;
 
-                DataEntry dataEntry = new DataEntry(data, name);
+                this.mainForm.AddDataEntry(new DataEntry(data, name));
+                this.Close();
             } 
             catch(Exception ex)
             {
                var result = MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
@@ -403,6 +406,11 @@ namespace XPSAnalyzingTool
             textBoxTitle.Text = $"{textBoxLastFile.Text.Split(".")[0]}-{indx}:{indy}:{indsigma}";
             PointPairList ppl = this.ParseFileToPPL($"{currentPath}\\{textBoxLastFile.Text}", "\t", indx, indy, indsigma);
             PreviewGraph(ppl);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

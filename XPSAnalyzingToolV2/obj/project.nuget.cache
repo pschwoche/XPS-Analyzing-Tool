@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x2cB6vxvsWOMqZl4nAZqCEbu77Z0IyGadH71wge9Pxsll6wXmP00Jb49b08hrXx/st+buDrBLZf6RCdxhdsA5w==",
+  "dgSpecHash": "Xkdw2lg9P1h0YLMxHFRVqrybkDdVLNPiqdrwKfGS5IB5Fc7Cpwk83sHuGbw0qkGUQyHntCaIwfG0FXBAN8H9iQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
+  "projectFilePath": "C:\\Users\\pschw\\source\\repos\\pschwoche\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pschw\\.nuget\\packages\\zedgraph\\5.1.7\\zedgraph.5.1.7.nupkg.sha512"
   ],
@@ -11,7 +11,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Das Paket \"ZedGraph 5.1.7\" wurde nicht mit dem Projektzielframework \"net5.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "message": "Das Paket \"ZedGraph 5.1.7\" wurde nicht mit dem Projektzielframework \"net5.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "ZedGraph",
       "targetGraphs": [
         "net5.0-windows7.0"

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using XPSAnalyzingToolV2;
 using ZedGraph;
 
 namespace XPSAnalyzingTool
 {
-    public class DataEntry
+    public class DataEntry : INotifyPropertyChanged
     {
 
         public Data Data { set; get; }
@@ -16,6 +16,13 @@ namespace XPSAnalyzingTool
 
         public PointPairList PPL_data { set; get; }
         public PointPairList PPL_error { set; get; }
+
+
+        public string Name { 
+            get { return this.GraphProperties.LineItem.Label.Text; }
+        }
+
+
 
 
         public DataEntry(Data data, GraphProperties gp)
@@ -39,6 +46,8 @@ namespace XPSAnalyzingTool
 
             InitPPLs();
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         private void InitPPLs()
         {
