@@ -54,6 +54,7 @@ namespace XPSAnalyzingTool
             this.label2 = new System.Windows.Forms.Label();
             this.checkBoxVisibleFit = new System.Windows.Forms.CheckBox();
             this.btnColorFit = new System.Windows.Forms.Button();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.groupBoxGraphVisuals.SuspendLayout();
@@ -198,8 +199,9 @@ namespace XPSAnalyzingTool
             // 
             this.numericUpDownHeightOffsetData.Location = new System.Drawing.Point(108, 48);
             this.numericUpDownHeightOffsetData.Name = "numericUpDownHeightOffsetData";
-            this.numericUpDownHeightOffsetData.Size = new System.Drawing.Size(41, 23);
+            this.numericUpDownHeightOffsetData.Size = new System.Drawing.Size(63, 23);
             this.numericUpDownHeightOffsetData.TabIndex = 3;
+            this.numericUpDownHeightOffsetData.ValueChanged += new System.EventHandler(this.numericUpDownHeightOffsetData_ValueChanged);
             // 
             // btnColorData
             // 
@@ -375,6 +377,7 @@ namespace XPSAnalyzingTool
         private System.Windows.Forms.Button btnRenameData;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSaveFit;
+        private System.Windows.Forms.ColorDialog colorDialog;
     }
 }
 

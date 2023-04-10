@@ -14,6 +14,7 @@ namespace XPSAnalyzingTool
         public LineItem LineItem { get; }
         public ErrorBarItem Errorbaritem { get; }
         public bool IsVisible { set; get; }
+        public double Offset { set; get; }
 
         public GraphProperties(string name)
         {
@@ -26,6 +27,7 @@ namespace XPSAnalyzingTool
 
         private void SetDefaults()
         {
+            Offset = 0;
             IsVisible = true;
             LineItem.Line.Color = Color.Blue;
             LineItem.Line.IsVisible = false;

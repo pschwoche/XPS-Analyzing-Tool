@@ -34,10 +34,10 @@ namespace XPSAnalyzingTool
             blist_data.ListChanged += DataListChanged;
             //blist_data.ListChanged += updateZedGraphBig;
 
-
             InitializeComponent();
+            this.numericUpDownHeightOffsetData.Maximum = Decimal.MaxValue;
 
-
+            CheckSelectedGraphIndex();
             InitDataViewGrids();
 
 
@@ -68,6 +68,18 @@ namespace XPSAnalyzingTool
         {
             this.smallGraphPane = this.zedGraphControlSmall.GraphPane;
         }
+
+        private PointPairList GetModifiedPPL(DataEntry dataEntry)
+        {
+            PointPairList ppl_mod = new PointPairList();    
+            foreach( PointPair pp in dataEntry.PPL_data)
+            {
+                ppl_mod.Add(new PointPair(pp.X,pp.Y+dataEntry.GraphProperties.Offset));
+            }
+            return ppl_mod;
+
+        }
+
         private void updateZedGraphBig()
         {
             bigGraphPane.CurveList.Clear();
@@ -75,7 +87,7 @@ namespace XPSAnalyzingTool
             {
                 if (dataEntry.GraphProperties.IsVisible)
                 {
-                    LineItem lineitem = this.bigGraphPane.AddCurve(dataEntry.GraphProperties.LineItem.Label.Text, dataEntry.PPL_data, Color.OrangeRed);
+                    LineItem lineitem = this.bigGraphPane.AddCurve(dataEntry.GraphProperties.LineItem.Label.Text, GetModifiedPPL(dataEntry), Color.OrangeRed);
                     lineitem.Line = dataEntry.GraphProperties.LineItem.Line;
                     lineitem.Symbol = dataEntry.GraphProperties.LineItem.Symbol;
                 }
@@ -132,7 +144,17 @@ namespace XPSAnalyzingTool
             dataGridViewFit.DataSource = people;
         }
 
+        private void CheckSelectedGraphIndex()
+        {
+            if (selectedDataEntryIndex >= 0 || selectedDataEntryIndex < this.dataEntries.Count)
+            {
+                this.groupBoxGraphVisuals.Enabled = true;
+            } else
+            {
+                this.groupBoxGraphVisuals.Enabled = false;
 
+            }
+        }
 
         private void dataGridViewData_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -142,6 +164,7 @@ namespace XPSAnalyzingTool
                 dataGridViewData.CurrentCell = dataGridViewData.Rows[e.RowIndex].Cells[e.ColumnIndex];
                 dataGridViewData.Rows[e.RowIndex].Selected = true;
                 selectedDataEntryIndex = e.RowIndex;
+                CheckSelectedGraphIndex();
                 // Show the context menu at the location of the mouse click
 
                 DataEntry selectedDataEntry = dataGridViewData.Rows[e.RowIndex].DataBoundItem as DataEntry;
@@ -178,17 +201,23 @@ namespace XPSAnalyzingTool
                 dataGridViewData.CurrentCell = dataGridViewData.Rows[e.RowIndex].Cells[e.ColumnIndex];
                 dataGridViewData.Rows[e.RowIndex].Selected = true;
                 selectedDataEntryIndex = e.RowIndex;
+                
                 // Show the context menu at the location of the mouse click
 
                 DataEntry selectedDataEntry = dataGridViewData.Rows[e.RowIndex].DataBoundItem as DataEntry;
 
                 this.selectedDataEntryIndex = e.RowIndex;
+                CheckSelectedGraphIndex();
 
 
                 this.checkBoxVisibleData.Enabled = true;
                 this.checkBoxVisibleData.Checked = selectedDataEntry.GraphProperties.IsVisible;
+                this.numericUpDownHeightOffsetData.Value = (decimal) selectedDataEntry.GraphProperties.Offset;
+
+
 
             }
+
         }
 
 
@@ -286,7 +315,23 @@ namespace XPSAnalyzingTool
 
         private void btnColorData_Click(object sender, EventArgs e)
         {
+            if (selectedDataEntryIndex != -1 && selectedDataEntryIndex < dataEntries.Count)
+            { 
+                DialogResult dr = colorDialog.ShowDialog();
+
+                if (dr == DialogResult.OK)
+                {
+                    // Get the selected color from the ColorDialog
+                    this.dataEntries[selectedDataEntryIndex].GraphProperties.LineItem.Color = colorDialog.Color;
+                }
+
+                updateZedGraphBig();
+            }
+
+
             people.Add(new Person("Data", "D", 75));
+           
+
         }
 
         private void checkBoxVisibleData_CheckedChanged(object sender, EventArgs e)
@@ -294,6 +339,16 @@ namespace XPSAnalyzingTool
             if (selectedDataEntryIndex != -1 && selectedDataEntryIndex < dataEntries.Count)
             {
                 this.dataEntries[selectedDataEntryIndex].GraphProperties.IsVisible = this.checkBoxVisibleData.Checked;
+                updateZedGraphBig();
+            }
+        }
+
+        private void numericUpDownHeightOffsetData_ValueChanged(object sender, EventArgs e)
+        {
+
+            if (selectedDataEntryIndex != -1 && selectedDataEntryIndex < dataEntries.Count)
+            {
+                this.dataEntries[selectedDataEntryIndex].GraphProperties.Offset = (double) this.numericUpDownHeightOffsetData.Value;
                 updateZedGraphBig();
             }
         }
