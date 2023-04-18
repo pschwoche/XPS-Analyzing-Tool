@@ -356,5 +356,10 @@ namespace XPSAnalyzingTool
                 updateZedGraphBig();
             }
         }
+
+        private void btnRemoveData_Click(object sender, EventArgs e)
+        {
+            new FitForm();
+        }
     }
 }

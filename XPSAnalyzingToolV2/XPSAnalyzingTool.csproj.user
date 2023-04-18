@@ -4,6 +4,9 @@
     <Compile Update="DataManipulationForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

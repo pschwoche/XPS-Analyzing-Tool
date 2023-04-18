@@ -164,6 +164,7 @@ namespace XPSAnalyzingTool
             this.btnRemoveData.TabIndex = 5;
             this.btnRemoveData.Text = "Remove";
             this.btnRemoveData.UseVisualStyleBackColor = true;
+            this.btnRemoveData.Click += new System.EventHandler(this.btnRemoveData_Click);
             // 
             // label1
             // 
