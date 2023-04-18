@@ -180,6 +180,12 @@ namespace XPSAnalyzingTool
                         System.Diagnostics.Debug.WriteLine($"Fit: {str}");
                     });
 
+                    contextMenuStrip.Items.Add("Manipulate", null, (s, ev) =>
+                    {
+                        string str = selectedDataEntry.Name;
+                        new DataManipulationForm(selectedDataEntry, this);
+                    });
+
 
 
                     contextMenuStrip.Items.Add("Delete", null, (s, ev) =>
@@ -232,8 +238,6 @@ namespace XPSAnalyzingTool
             this.dataEntries.Add(entry);
             blist_data.Add(entry);
             updateZedGraphBig();
-
-
 
         }
 
@@ -329,8 +333,8 @@ namespace XPSAnalyzingTool
             }
 
 
-            people.Add(new Person("Data", "D", 75));
-           
+            // people.Add(new Person("Data", "D", 75));
+
 
         }
 

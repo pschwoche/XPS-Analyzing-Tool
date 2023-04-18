@@ -93,19 +93,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pschw\\.nuget\\packages\\": {}
+    "C:\\Users\\Patrick G.09.27\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pschw\\source\\repos\\pschwoche\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
+      "projectUniqueName": "C:\\Users\\Patrick G.09.27\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
       "projectName": "XPSAnalyzingTool",
-      "projectPath": "C:\\Users\\pschw\\source\\repos\\pschwoche\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
-      "packagesPath": "C:\\Users\\pschw\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pschw\\source\\repos\\pschwoche\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\obj\\",
+      "projectPath": "C:\\Users\\Patrick G.09.27\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
+      "packagesPath": "C:\\Users\\Patrick G.09.27\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Patrick G.09.27\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\pschw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Patrick G.09.27\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -155,7 +155,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },

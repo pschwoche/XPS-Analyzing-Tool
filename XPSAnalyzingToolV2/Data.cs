@@ -13,6 +13,7 @@ namespace XPSAnalyzingTool
         public double[] Y { get; set; }
         public double[] Error { get; set; }
 
+        public Data() { }
         public Data(double[] x, double[] y, double[] err)
         {
             if(x.Length != y.Length || x.Length != err.Length || y.Length != err.Length)

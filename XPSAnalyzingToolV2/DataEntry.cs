@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using ZedGraph;
 
 namespace XPSAnalyzingTool
@@ -22,6 +23,28 @@ namespace XPSAnalyzingTool
             get { return this.GraphProperties.LineItem.Label.Text; }
         }
 
+        public DataEntry Clone()
+        {
+            DataEntry clonedEntry = new DataEntry();
+            clonedEntry.Data = new Data
+            {
+                X = this.Data.X?.ToArray(), // create new arrays with the same data
+                Y = this.Data.Y?.ToArray(),
+                Error = this.Data.Error?.ToArray()
+            };
+            clonedEntry.GraphProperties = new GraphProperties(this.Name); 
+            clonedEntry.InitPPLs();
+            return clonedEntry;
+        }
+
+        public DataEntry(){}
+
+        public DataEntry(DataEntry dataEntry)
+        {
+            this.Data = dataEntry.Data;
+            this.GraphProperties = dataEntry.GraphProperties;
+            InitPPLs();
+        }
 
 
 
@@ -50,6 +73,11 @@ namespace XPSAnalyzingTool
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void InitPPLs()
+        {
+            this.PPL_data = Data.CreateDataPPL();
+            this.PPL_error = Data.CreateErrorPPL();
+        }
+        public void Update()
         {
             this.PPL_data = Data.CreateDataPPL();
             this.PPL_error = Data.CreateErrorPPL();

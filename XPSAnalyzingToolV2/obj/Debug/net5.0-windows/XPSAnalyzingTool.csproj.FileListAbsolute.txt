@@ -66,3 +66,38 @@ C:\Users\pschw\source\repos\pschwoche\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\
 C:\Users\pschw\source\repos\pschwoche\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\refint\XPSAnalyzingTool.dll
 C:\Users\pschw\source\repos\pschwoche\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.genruntimeconfig.cache
 C:\Users\pschw\source\repos\pschwoche\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\ref\XPSAnalyzingTool.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\XPSAnalyzingTool.exe
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\XPSAnalyzingTool.deps.json
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\XPSAnalyzingTool.runtimeconfig.json
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\XPSAnalyzingTool.runtimeconfig.dev.json
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\XPSAnalyzingTool.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\XPSAnalyzingTool.pdb
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\ZedGraph.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\de\ZedGraph.resources.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\es\ZedGraph.resources.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\fr\ZedGraph.resources.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\hu\ZedGraph.resources.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\it\ZedGraph.resources.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\ja\ZedGraph.resources.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\pt\ZedGraph.resources.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\ru\ZedGraph.resources.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\sk\ZedGraph.resources.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\sv\ZedGraph.resources.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\tr\ZedGraph.resources.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\zh-CN\ZedGraph.resources.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\bin\Debug\net5.0-windows\zh-TW\ZedGraph.resources.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.csproj.AssemblyReference.cache
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.LoadFileForm.resources
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.MainForm.resources
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.csproj.GenerateResource.cache
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.AssemblyInfoInputs.cache
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.AssemblyInfo.cs
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.csproj.CoreCompileInputs.cache
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.csproj.CopyComplete
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\refint\XPSAnalyzingTool.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.pdb
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.genruntimeconfig.cache
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\ref\XPSAnalyzingTool.dll
+C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.DataManipulationForm.resources
