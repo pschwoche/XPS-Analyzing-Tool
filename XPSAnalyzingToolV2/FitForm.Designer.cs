@@ -33,8 +33,8 @@ namespace XPSAnalyzingTool
             this.components = new System.ComponentModel.Container();
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.zedGraphControl2 = new ZedGraph.ZedGraphControl();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // zedGraphControl1
@@ -69,34 +69,27 @@ namespace XPSAnalyzingTool
             this.zedGraphControl2.TabIndex = 1;
             this.zedGraphControl2.UseExtendedPrintDialog = true;
             // 
-            // listView2
+            // dataGridView1
             // 
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(904, 282);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(244, 346);
-            this.listView2.TabIndex = 2;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(1207, 280);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(174, 356);
-            this.treeView1.TabIndex = 3;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(813, 101);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(324, 459);
+            this.dataGridView1.TabIndex = 2;
             // 
             // FitForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1470, 773);
-            this.Controls.Add(this.treeView1);
-            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.zedGraphControl2);
             this.Controls.Add(this.zedGraphControl1);
             this.Name = "FitForm";
             this.Text = "FitForm";
             this.Load += new System.EventHandler(this.FitForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -107,7 +100,6 @@ namespace XPSAnalyzingTool
         private System.Windows.Forms.Panel panel1;
         private ZedGraph.ZedGraphControl zedGraphControl1;
         private ZedGraph.ZedGraphControl zedGraphControl2;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

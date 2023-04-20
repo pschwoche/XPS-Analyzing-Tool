@@ -12,37 +12,40 @@ namespace XPSAnalyzingTool
 {
     public partial class FitForm : Form
     {
+
         public FitForm()
         {
-           InitializeComponent();
+            InitializeComponent();
             this.Visible = true;
-          
+            List<Test> testData = new List<Test>
+            {
+                new Test { Name = "Name1", Prop1 = "Prop1_1", Prop2 = "Prop2_1" },
+                new Test { Name = "Name2", Prop1 = "Prop1_2", Prop2 = "Prop2_2" },
+                // Weitere Test-Objekte hinzufügen
+            };
         }
+
 
         private void FitForm_Load(object sender, EventArgs e)
         {
 
-                // Füge Wurzelknoten zum TreeView hinzu
-                TreeNode rootNode = new TreeNode("Personen");
-                treeView1.Nodes.Add(rootNode);
 
-                // Füge Kindknoten zum Wurzelknoten hinzu
-                TreeNode person1Node = new TreeNode("Person 1");
-                person1Node.Nodes.Add("Name: John");
-                person1Node.Nodes.Add("Alter: 30");
-                person1Node.Nodes.Add("Haarfarbe: Braun");
-                rootNode.Nodes.Add(person1Node);
 
-                // Füge einen weiteren Kindknoten hinzu
-                TreeNode person2Node = new TreeNode("Person 2");
-                person2Node.Nodes.Add("Name: Jane");
-                person2Node.Nodes.Add("Alter: 25");
-                person2Node.Nodes.Add("Haarfarbe: Blond");
-                rootNode.Nodes.Add(person2Node);
-
-                // Erweitere den Wurzelknoten
-                treeView1.ExpandAll();
-            
         }
     }
+
+
+
+
+        public class Test
+        {
+            public string Name { get; set; }
+            public string Prop1 { get; set; }
+            public string Prop2 { get; set; }
+        }
+   
+
+
+
+
 }
