@@ -177,6 +177,8 @@ namespace XPSAnalyzingTool
                     contextMenuStrip.Items.Add("Fit", null, (s, ev) =>
                     {
                         string str = selectedDataEntry.Name;
+
+                        new FitForm(selectedDataEntry);
                         System.Diagnostics.Debug.WriteLine($"Fit: {str}");
                     });
 
@@ -359,7 +361,7 @@ namespace XPSAnalyzingTool
 
         private void btnRemoveData_Click(object sender, EventArgs e)
         {
-            new FitForm();
+            new FitForm(null);
         }
     }
 }

@@ -2,50 +2,70 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Subro.Controls;
 
 namespace XPSAnalyzingTool
 {
     public partial class FitForm : Form
     {
 
-        public FitForm()
+        private DataEntry dataEntry;
+
+        DataGridViewGrouper grouper;
+        public FitForm(DataEntry DataEntry)
         {
+            this.dataEntry = DataEntry;
             InitializeComponent();
+            grouper = new DataGridViewGrouper(dataGridView1);
+
+
+
+
             this.Visible = true;
             List<Test> testData = new List<Test>
             {
-                new Test { Name = "Name1", Prop1 = "Prop1_1", Prop2 = "Prop2_1" },
-                new Test { Name = "Name2", Prop1 = "Prop1_2", Prop2 = "Prop2_2" },
+                new Test { Name = "Name1"}.AddProp("Prop-1a").AddProp("Prop-1b"),
+                new Test { Name = "Name2"}.AddProp("Prop-2a").AddProp("Prop-2b"),
                 // Weitere Test-Objekte hinzufügen
             };
+            
+            grouper.SetGroupOn<Test>(t => t.Name);
         }
 
 
         private void FitForm_Load(object sender, EventArgs e)
         {
-
-
+          
 
         }
+
+
     }
 
+    public class Test
+    {
+        public string Name { get; set; }
+        public List<string> Props { get; set; }
 
 
-
-        public class Test
+        public Test()
         {
-            public string Name { get; set; }
-            public string Prop1 { get; set; }
-            public string Prop2 { get; set; }
+            Props = new List<string>();
         }
-   
+        public Test AddProp(String str)
+        {
+            Props.Add(str);
+            return this;
+        }
 
 
+    }
 
 
 }

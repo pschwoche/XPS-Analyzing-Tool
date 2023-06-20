@@ -1,9 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32413.511
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPSAnalyzingTool", "XPSAnalyzingToolV2\XPSAnalyzingTool.csproj", "{29121368-CA0A-4C20-B93C-9E4FD066B960}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Projektmappenelemente", "{CD21F30E-1FDA-4ED9-99ED-12992C570B0C}"
+	ProjectSection(SolutionItems) = preProject
+		XPSAnalyzingToolV2\DataGridViewGrouper\DataGridViewGrouper.cs = XPSAnalyzingToolV2\DataGridViewGrouper\DataGridViewGrouper.cs
+		XPSAnalyzingToolV2\DataGridViewGrouper\DataGridViewGrouper.csproj = XPSAnalyzingToolV2\DataGridViewGrouper\DataGridViewGrouper.csproj
+		XPSAnalyzingToolV2\DataGridViewGrouper\DataGridViewGrouperContextMenuStrip.cs = XPSAnalyzingToolV2\DataGridViewGrouper\DataGridViewGrouperContextMenuStrip.cs
+		XPSAnalyzingToolV2\DataGridViewGrouper\DataGridViewGrouperControl.cs = XPSAnalyzingToolV2\DataGridViewGrouper\DataGridViewGrouperControl.cs
+		XPSAnalyzingToolV2\DataGridViewGrouper\DataGridViewGrouperControl.designer.cs = XPSAnalyzingToolV2\DataGridViewGrouper\DataGridViewGrouperControl.designer.cs
+		XPSAnalyzingToolV2\DataGridViewGrouper\DataGridViewGrouperControl.resx = XPSAnalyzingToolV2\DataGridViewGrouper\DataGridViewGrouperControl.resx
+		XPSAnalyzingToolV2\DataGridViewGrouper\GroupingInfo.cs = XPSAnalyzingToolV2\DataGridViewGrouper\GroupingInfo.cs
+		XPSAnalyzingToolV2\DataGridViewGrouper\GroupingOptions.cs = XPSAnalyzingToolV2\DataGridViewGrouper\GroupingOptions.cs
+		XPSAnalyzingToolV2\DataGridViewGrouper\GroupingSource.cs = XPSAnalyzingToolV2\DataGridViewGrouper\GroupingSource.cs
+		XPSAnalyzingToolV2\DataGridViewGrouper\GroupList.cs = XPSAnalyzingToolV2\DataGridViewGrouper\GroupList.cs
+		XPSAnalyzingToolV2\DataGridViewGrouper\SearchBox.cs = XPSAnalyzingToolV2\DataGridViewGrouper\SearchBox.cs
+		XPSAnalyzingToolV2\DataGridViewGrouper\SearchBox.designer.cs = XPSAnalyzingToolV2\DataGridViewGrouper\SearchBox.designer.cs
+		XPSAnalyzingToolV2\DataGridViewGrouper\SearchBox.resx = XPSAnalyzingToolV2\DataGridViewGrouper\SearchBox.resx
+		XPSAnalyzingToolV2\DataGridViewGrouper\Support.cs = XPSAnalyzingToolV2\DataGridViewGrouper\Support.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
