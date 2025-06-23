@@ -1,17 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "Ylu1yS07eYbG2mNiXCEhZxtwQWOKb5bvGh7P17TyA6rFTvL9SJwT12ceYKyyIwKLem1BGYO/LdiMxr7IKfKPJw==",
+  "dgSpecHash": "cCE4zePC00k=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Patrick G.09.27\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
+  "projectFilePath": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Patrick G.09.27\\.nuget\\packages\\zedgraph\\5.1.7\\zedgraph.5.1.7.nupkg.sha512"
+    "C:\\Users\\pschw\\.nuget\\packages\\zedgraph\\5.1.7\\zedgraph.5.1.7.nupkg.sha512",
+    "C:\\Users\\pschw\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\pschw\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\pschw\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\pschw\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
   ],
   "logs": [
     {
       "code": "NU1701",
       "level": "Warning",
-      "warningLevel": 1,
       "message": "Das Paket \"ZedGraph 5.1.7\" wurde nicht mit dem Projektzielframework \"net5.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "projectPath": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj",
       "libraryId": "ZedGraph",
       "targetGraphs": [
         "net5.0-windows7.0"
