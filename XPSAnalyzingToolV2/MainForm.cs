@@ -363,5 +363,10 @@ namespace XPSAnalyzingTool
         {
             new FitForm(null);
         }
+
+        private void dataGridViewData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

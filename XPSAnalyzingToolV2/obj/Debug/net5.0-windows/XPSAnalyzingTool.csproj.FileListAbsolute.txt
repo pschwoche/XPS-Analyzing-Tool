@@ -102,5 +102,3 @@ C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\
 C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\ref\XPSAnalyzingTool.dll
 C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.DataManipulationForm.resources
 C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\XPSAnalyzingTool.FitForm.resources
-C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\Subro.Controls.DataGridViewGrouperControl.resources
-C:\Users\Patrick G.09.27\Documents\GitHub\XPS-Analyzing-Tool\XPSAnalyzingToolV2\obj\Debug\net5.0-windows\Subro.Controls.SearchBoxBase.resources
