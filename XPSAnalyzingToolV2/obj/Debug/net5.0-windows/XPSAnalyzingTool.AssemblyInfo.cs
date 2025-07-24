@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("XPSAnalyzingTool")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6078eb176745d2986fb3cd8a27ba3f240bf25ff3")]
 [assembly: System.Reflection.AssemblyProductAttribute("XPSAnalyzingTool")]
 [assembly: System.Reflection.AssemblyTitleAttribute("XPSAnalyzingTool")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

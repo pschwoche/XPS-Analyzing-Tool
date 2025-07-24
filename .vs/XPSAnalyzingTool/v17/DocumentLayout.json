@@ -1,0 +1,167 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|c:\\users\\pschw\\documents\\github\\xps-analyzing-tool\\xpsanalyzingtoolv2\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|solutionrelative:xpsanalyzingtoolv2\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|c:\\users\\pschw\\documents\\github\\xps-analyzing-tool\\xpsanalyzingtoolv2\\dataentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|solutionrelative:xpsanalyzingtoolv2\\dataentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|c:\\users\\pschw\\documents\\github\\xps-analyzing-tool\\xpsanalyzingtoolv2\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|solutionrelative:xpsanalyzingtoolv2\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\xpsanalyzingtoolv2\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|solutionrelative:xpsanalyzingtoolv2\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\xpsanalyzingtoolv2\\fitform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|solutionrelative:xpsanalyzingtoolv2\\fitform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|c:\\users\\pschw\\documents\\github\\xps-analyzing-tool\\xpsanalyzingtoolv2\\fitform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|solutionrelative:xpsanalyzingtoolv2\\fitform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\xpsanalyzingtoolv2\\datamanipulationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|solutionrelative:xpsanalyzingtoolv2\\datamanipulationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|c:\\users\\pschw\\documents\\github\\xps-analyzing-tool\\xpsanalyzingtoolv2\\datamanipulationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|solutionrelative:xpsanalyzingtoolv2\\datamanipulationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|c:\\users\\pschw\\documents\\github\\xps-analyzing-tool\\xpsanalyzingtoolv2\\graphproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29121368-CA0A-4C20-B93C-9E4FD066B960}|XPSAnalyzingToolV2\\XPSAnalyzingTool.csproj|solutionrelative:xpsanalyzingtoolv2\\graphproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FitForm.cs",
+              "DocumentMoniker": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\FitForm.cs",
+              "RelativeDocumentMoniker": "XPSAnalyzingToolV2\\FitForm.cs",
+              "ToolTip": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\FitForm.cs",
+              "RelativeToolTip": "XPSAnalyzingToolV2\\FitForm.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T11:29:32.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FitForm.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\FitForm.cs",
+              "RelativeDocumentMoniker": "XPSAnalyzingToolV2\\FitForm.cs",
+              "ToolTip": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\FitForm.cs [Entwurf]",
+              "RelativeToolTip": "XPSAnalyzingToolV2\\FitForm.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T11:29:33.674Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DataManipulationForm.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\DataManipulationForm.cs",
+              "RelativeDocumentMoniker": "XPSAnalyzingToolV2\\DataManipulationForm.cs",
+              "ToolTip": "C:\\Users\\Patrick G.09.27\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\DataManipulationForm.cs [Entwurf]",
+              "RelativeToolTip": "..\\..\\..\\..\\Patrick G.09.27\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\DataManipulationForm.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-06-23T11:29:33.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DataManipulationForm.cs",
+              "DocumentMoniker": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\DataManipulationForm.cs",
+              "RelativeDocumentMoniker": "XPSAnalyzingToolV2\\DataManipulationForm.cs",
+              "ToolTip": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\DataManipulationForm.cs",
+              "RelativeToolTip": "XPSAnalyzingToolV2\\DataManipulationForm.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAQwCUAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T11:29:33.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainForm.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\MainForm.cs",
+              "RelativeDocumentMoniker": "XPSAnalyzingToolV2\\MainForm.cs",
+              "ToolTip": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\MainForm.cs [Entwurf]",
+              "RelativeToolTip": "XPSAnalyzingToolV2\\MainForm.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T11:29:33.678Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\MainForm.cs",
+              "RelativeDocumentMoniker": "XPSAnalyzingToolV2\\MainForm.cs",
+              "ToolTip": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\MainForm.cs",
+              "RelativeToolTip": "XPSAnalyzingToolV2\\MainForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T11:29:33.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataEntry.cs",
+              "DocumentMoniker": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\DataEntry.cs",
+              "RelativeDocumentMoniker": "XPSAnalyzingToolV2\\DataEntry.cs",
+              "ToolTip": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\DataEntry.cs",
+              "RelativeToolTip": "XPSAnalyzingToolV2\\DataEntry.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAuwEoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T11:29:33.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Data.cs",
+              "DocumentMoniker": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\Data.cs",
+              "RelativeDocumentMoniker": "XPSAnalyzingToolV2\\Data.cs",
+              "ToolTip": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\Data.cs",
+              "RelativeToolTip": "XPSAnalyzingToolV2\\Data.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T11:29:33.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GraphProperties.cs",
+              "DocumentMoniker": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\GraphProperties.cs",
+              "RelativeDocumentMoniker": "XPSAnalyzingToolV2\\GraphProperties.cs",
+              "ToolTip": "C:\\Users\\pschw\\Documents\\GitHub\\XPS-Analyzing-Tool\\XPSAnalyzingToolV2\\GraphProperties.cs",
+              "RelativeToolTip": "XPSAnalyzingToolV2\\GraphProperties.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBIAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T11:29:33.685Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
